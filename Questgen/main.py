@@ -77,7 +77,7 @@ class QGen:
         keyword_sentence_mapping = get_sentences_for_keyword(keywords, sentences)
 
         for k in keyword_sentence_mapping.keys():
-            text_snippet = " ".join(keyword_sentence_mapping[k][:3])
+            text_snippet = " ".join(keyword_sentence_mapping[k][:5])
             keyword_sentence_mapping[k] = text_snippet
 
    
