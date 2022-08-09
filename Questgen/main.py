@@ -105,7 +105,7 @@ class QGen:
     def predict_shortq(self, payload):
         inp = {
             "input_text": payload.get("input_text"),
-            "max_questions": payload.get("max_questions", 4)
+            "max_questions": payload.get("max_questions", 6)
         }
 
         text = inp['input_text']
@@ -120,7 +120,7 @@ class QGen:
         keyword_sentence_mapping = get_sentences_for_keyword(keywords, sentences)
         
         for k in keyword_sentence_mapping.keys():
-            text_snippet = " ".join(keyword_sentence_mapping[k][:3])
+            text_snippet = " ".join(keyword_sentence_mapping[k][:7])
             keyword_sentence_mapping[k] = text_snippet
 
         final_output = {}
