@@ -62,7 +62,7 @@ class QGen:
         start = time.time()
         inp = {
             "input_text": payload.get("input_text"),
-            "max_questions": payload.get("max_questions", 5)
+            "max_questions": payload.get("max_questions", 7)
         }
 
         text = inp['input_text']
@@ -77,7 +77,7 @@ class QGen:
         keyword_sentence_mapping = get_sentences_for_keyword(keywords, sentences)
 
         for k in keyword_sentence_mapping.keys():
-            text_snippet = " ".join(keyword_sentence_mapping[k][:5])
+            text_snippet = " ".join(keyword_sentence_mapping[k][:6])
             keyword_sentence_mapping[k] = text_snippet
 
    
